@@ -3,51 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Research Scholar</title>
-    <!-- Linking the CSS file we will create in Step 2 -->
+    <title>Your Name | Academic Homepage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Your Name</h1>
-        <p class="subtitle">Research Scholar in [Your Department/Field] | [Your University]</p>
-    </header>
+    <nav class="sidebar">
+        <div class="sidebar-brand">
+            <a href="index.html">Your Name</a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#research">Research</a></li>
+        </ul>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Welcome to my academic homepage. I am a PhD candidate / Research Scholar at [University Name]. My research primarily focuses on [Your Research Area], specifically looking into [Sub-topic or specific problem].</p>
-            <p>Previously, I completed my Master's degree at [Previous Institution] and worked on [Brief past project].</p>
-        </section>
+        <h3 class="sidebar-heading">Activities</h3>
+        <ul class="nav-links">
+            <li><a href="#">Workshops</a></li>
+            <li><a href="#">Talks</a></li>
+        </ul>
 
-        <section>
-            <h2>Research Interests</h2>
+        <h3 class="sidebar-heading">Resources</h3>
+        <ul class="nav-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Google Scholar</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        
+        <div class="profile-container">
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Your Name" onerror="this.style.display='none';">
+                <div class="pic-placeholder">Photo Placeholder</div>
+            </div>
+            <div class="profile-info">
+                <ul class="bio-list">
+                    <li>Senior Research Fellow / PhD Scholar, <a href="#">IIT Palakkad</a>.</li>
+                    <li>Mehta Family School of Data Science and Artificial Intelligence.</li>
+                </ul>
+                <p class="email-text">Email: yourusername at iitpkd dot ac dot in</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <section id="research">
+            <h2 class="section-title">Research</h2>
+            <p>My core research interests focus on improving the interpretability and alignment of deep learning architectures. Specifically, I work on justifiability in computer vision frameworks, aiming to align feature extraction mechanisms with human perspectives.</p>
             <ul>
-                <li>Primary Topic A (e.g., Data Science in Climate Modeling)</li>
-                <li>Secondary Topic B (e.g., Machine Learning Algorithms)</li>
-                <li>Topic C (e.g., Statistical Analysis)</li>
+                <li><strong>Current Focus:</strong> Vision Transformers (ViTs), Explainable AI (XAI), and custom evaluation frameworks for grounding neural alignments.</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Publications & Working Papers</h2>
-            <ul class="publications">
-                <li><strong>Author, A.</strong>, & Scholar, B. (2026). "Title of Your Most Recent Academic Paper." <em>Journal of Research</em>. <a href="#">[PDF]</a></li>
-                <li><strong>Author, A.</strong> (2025). "Another Paper Title or Conference Proceeding." <em>Conference Name</em>. <a href="#">[Link]</a></li>
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+            <ul class="academic-list">
+                <li>
+                    <strong>Your Name</strong>, Co-author, & Advisor. 
+                    "Focus on What Matters: Guiding Vision Transformers Towards Justification." 
+                    <em>Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</em>, 2025. 
+                    <a href="#">[Publisher Link]</a>
+                </li>
             </ul>
         </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
-            <p>Profiles: <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">LinkedIn</a></p>
+        <section id="teaching">
+            <h2 class="section-title">Teaching</h2>
+            <ul class="academic-list">
+                <li><strong>Teaching Assistant</strong>, Machine Learning / Deep Learning (Undergraduate Level), IIT Palakkad.</li>
+            </ul>
         </section>
+
     </main>
-
-    <footer>
-        <p>&copy; 2026 Your Name. Powered by GitHub Pages.</p>
-    </footer>
 
 </body>
 </html>
