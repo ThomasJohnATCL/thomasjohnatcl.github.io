@@ -3,83 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas John</title>
+    <title>Thomas John | IIT Palakkad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="sidebar">
-        <div class="sidebar-brand">
-            <a href="index.html">Thomas John</a>
-        </div>
+    <!-- Main Content Container -->
+    <div class="container">
         
-        <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#teaching">Teaching</a></li>
-            <li><a href="#research">Research</a></li>
-        </ul>
+        <!-- Top Header Navigation -->
+        <header class="site-header">
+            <div class="brand">Thomas John</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#teaching">Teaching</a>
+            </nav>
+        </header>
 
-        <h3 class="sidebar-heading">Activities</h3>
-        <ul class="nav-links">
-            <li><a href="#">Workshops</a></li>
-            <li><a href="#">Talks</a></li>
-        </ul>
-
-        <h3 class="sidebar-heading">Resources</h3>
-        <ul class="nav-links">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Google Scholar</a></li>
-        </ul>
-    </nav>
-
-    <main class="content">
-        
-        <div class="profile-container">
-            <div class="profile-pic">
-            <div class="pic-placeholder">Photo Placeholder</div>
-            <img src="photo.png" alt="Thomas John" onerror="this.style.display='none';">
-            </div>  
-            
-            <div class="profile-info">
-                <ul class="bio-list">
-                    <li>Senior Research Fellow / PhD Scholar, <a href="#">IIT Palakkad</a>.</li>
-                    <li>Mehta Family School of Data Science and Artificial Intelligence.</li>
-                </ul>
-                <p class="email-text">Email: 142314002@iitpkd.ac.in</p>
+        <!-- Profile / Hero Section -->
+        <section id="about" class="profile-section">
+            <div class="profile-frame">
+                <!-- If photo.png is missing, the CSS background handles the fallback gracefully -->
+                <img src="photo.png" alt="Thomas John" class="profile-img">
             </div>
-        </div>
-
-        <hr class="section-divider">
-
-        <section id="research">
-            <h2 class="section-title">Research</h2>
-            <p>My core research interests focus on improving the interpretability and alignment of deep learning architectures. Specifically, I work on justifiability in computer vision frameworks, aiming to align feature extraction mechanisms with human perspectives.</p>
-            <ul>
-                <li><strong>Current Focus:</strong> Vision Transformers (ViTs), Explainable AI (XAI), and custom evaluation frameworks for grounding neural alignments.</li>
-            </ul>
+            <div class="profile-info">
+                <h1>Thomas John</h1>
+                <p class="subtitle">Senior Research Fellow / PhD Scholar</p>
+                <p class="affiliation">
+                    Mehta Family School of Data Science and Artificial Intelligence<br>
+                    <a href="https://iitpkd.ac.in" target="_blank">Indian Institute of Technology Palakkad</a>
+                </p>
+                
+                <div class="profile-links">
+                    <a href="mailto:142314002@iitpkd.ac.in" class="btn btn-primary">Email Me</a>
+                    <a href="#" class="btn btn-secondary">Google Scholar</a>
+                    <a href="#" class="btn btn-secondary">GitHub</a>
+                </div>
+            </div>
         </section>
 
-        <section id="publications">
-            <h2 class="section-title">Publications</h2>
-            <ul class="academic-list">
-                <li>
-                    <strong>Your Name</strong>, Co-author, & Advisor. 
-                    "Focus on What Matters: Guiding Vision Transformers Towards Justification." 
-                    <em>Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</em>, 2025. 
-                    <a href="#">[Publisher Link]</a>
-                </li>
-            </ul>
-        </section>
+        <!-- Main Content -->
+        <main>
+            
+            <section id="research" class="content-section">
+                <h2 class="section-title">Research Interests</h2>
+                <p>My core research focuses on improving the interpretability and alignment of deep learning architectures. Specifically, I work on <strong>justifiability in computer vision frameworks</strong>, aiming to align machine learning feature extraction mechanisms closely with human visual perspectives.</p>
+                <p><strong>Current Directions:</strong> Vision Transformers (ViTs), Explainable AI (XAI), and custom evaluation metrics for validating neural alignments.</p>
+            </section>
 
-        <section id="teaching">
-            <h2 class="section-title">Teaching</h2>
-            <ul class="academic-list">
-                <li><strong>Teaching Assistant</strong>, Machine Learning / Deep Learning (Undergraduate Level), IIT Palakkad.</li>
-            </ul>
-        </section>
+            <section id="publications" class="content-section">
+                <h2 class="section-title">Publications</h2>
+                <div class="publication-item">
+                    <span class="pub-authors"><strong>Thomas John</strong>, Co-author, & Advisor.</span>
+                    <span class="pub-title">"Focus on What Matters: Guiding Vision Transformers Towards Justification."</span>
+                    <span class="pub-venue">Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</span>, 2025.
+                    <div class="pub-links">
+                        <a href="#">[Publisher Link]</a>
+                        <a href="#">[Code]</a>
+                    </div>
+                </div>
+            </section>
 
-    </main>
+            <section id="teaching" class="content-section">
+                <h2 class="section-title">Teaching & Activities</h2>
+                <ul class="academic-list">
+                    <li><strong>Teaching Assistant</strong>, Machine Learning / Deep Learning (Undergraduate Level), IIT Palakkad.</li>
+                    <li>Resource person for department Python for Data Science workshops.</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Thomas John. Built with clean HTML & CSS.</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
