@@ -1,192 +1,262 @@
-/* Layout Reset & Typography */
+/* --- Global Reset & Styling --- */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #222222;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #334155;
+    background-color: #f8fafc;
+    padding: 2rem 1rem;
+}
+
+/* Centered Academic Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
     background-color: #ffffff;
-    display: flex; /* Creates the two-column sidebar layout */
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
-/* 1. Left Sidebar Styling */
-.sidebar {
-    width: 240px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f4f6f9; /* Light neutral gray background */
-    border-right: 1px solid #d0d7de;
-    padding: 20px 15px;
-    overflow-y: auto;
+/* --- Top Header Navigation --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-.sidebar-brand a {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #4682B4; /* Muted steel blue */
-    text-decoration: none;
-    display: block;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #4682B4;
-    padding-bottom: 5px;
-}
-
-.sidebar-heading {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #111111;
-    margin: 20px 0 5px 0;
-    padding-bottom: 3px;
-    border-bottom: 1px solid #cccccc;
-}
-
-.nav-links {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    margin-bottom: 6px;
+.site-header .brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
 }
 
 .nav-links a {
-    color: #0056b3;
     text-decoration: none;
-    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    transition: color 0.2s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    text-decoration: underline;
-    color: #003366;
+.nav-links a:hover {
+    color: #0f172a;
 }
 
-/* 2. Right Content Window Styling */
-.content {
-    margin-left: 240px; /* Pushes content past the fixed sidebar width */
-    padding: 40px 50px;
-    max-width: 900px;
-    width: 100%;
-}
-
-/* Profile Photo and Block Details */
-.profile-container {
+/* --- Profile Section (Horizontal) --- */
+.profile-section {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
-    margin-bottom: 25px;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 3.5rem;
 }
 
-/* 1. Define the rigid container size */
-.profile-pic {
+/* The Smart Image Container */
+.profile-frame {
     position: relative;
-    width: 160px;          /* Adjust to your preferred size */
-    height: 160px;         /* Must match width for a perfect square/circle */
-    border-radius: 50%;    /* Makes it a clean academic circle profile (optional) */
-    overflow: hidden;      /* Clips the image/placeholder to the circle */
-    border: 2px solid #e2e8f0; /* Optional: clean subtle border */
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e2e8f0; /* Fallback background tint */
+    border: 3px solid #f1f5f9;
 }
 
-/* 2. Force the image to match the container perfectly */
-.profile-pic img {
+/* If the image breaks, this pseudo-element cleanly prints TJ in the center instead */
+.profile-frame::before {
+    content: "TJ";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* Prevents stretching, crops like a frame */
-    z-index: 2;            /* Sits on top of the placeholder */
-}
-
-/* 3. Force the placeholder to match the exact same space */
-.profile-pic .pic-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f1f5f9; /* Light grey academic background */
-    color: #64748b;            /* Subtle text color */
-    
-    /* Center the text perfectly inside the box */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 0.85rem;
-    padding: 10px;
-    z-index: 1;                /* Sits behind the image */
+    font-size: 2rem;
+    font-weight: 600;
+    color: #94a3b8;
+    background-color: #cbd5e1;
 }
 
-.profile-info {
-    flex-grow: 1;
+.profile-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Sits over the fallback letters */
 }
 
-.bio-list {
-    list-style-type: square;
-    padding-left: 20px;
-    margin-top: 0;
+/* Profile Text Styling */
+.profile-info h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
 }
 
-.bio-list li {
-    margin-bottom: 8px;
-    font-size: 1.05rem;
+.profile-info .subtitle {
+    font-size: 1.1rem;
+    color: #475569;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
 }
 
-.email-text {
+.profile-info .affiliation {
     font-size: 0.95rem;
-    margin-top: 15px;
+    color: #64748b;
+    margin-bottom: 1.25rem;
 }
 
-/* Content Segmenting headers */
+.profile-info a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons / Quick Links */
+.profile-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #1e293b;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #0f172a;
+}
+
+.btn-secondary {
+    background-color: #f1f5f9;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+    color: #1e293b !important;
+}
+
+/* --- Content Sections --- */
+.content-section {
+    margin-bottom: 3rem;
+}
+
 .section-title {
-    font-family: Georgia, serif;
     font-size: 1.35rem;
-    color: #4682B4; /* Exact soft academic blue color match */
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: normal;
+    color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.section-divider {
-    border: 0;
-    border-top: 1px solid #999999;
-    margin: 20px 0;
+/* Publication Styling */
+.publication-item {
+    padding: 0.75rem 0;
+    border-left: 3px solid #cbd5e1;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
 }
 
+.pub-title {
+    font-style: normal;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.pub-venue {
+    font-style: italic;
+    color: #475569;
+}
+
+.pub-links {
+    margin-top: 0.25rem;
+}
+
+.pub-links a {
+    font-size: 0.85rem;
+    color: #3b82f6;
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+/* Lists styling */
 .academic-list {
-    list-style-type: square;
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 .academic-list li {
-    margin-bottom: 12px;
-    line-height: 1.5;
+    margin-bottom: 0.5rem;
 }
 
-/* Responsive adjustments for narrow viewports/mobiles */
-@media (max-width: 768px) {
-    body {
+/* --- Footer --- */
+.site-footer {
+    margin-top: 4rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 640px) {
+    .site-header {
         flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
     }
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #d0d7de;
-    }
-    .content {
+    
+    .nav-links a {
         margin-left: 0;
-        padding: 20px;
+        margin-right: 1.25rem;
     }
-    .profile-container {
+    
+    .profile-section {
         flex-direction: column;
-        gap: 15px;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .profile-links {
+        justify-content: center;
     }
 }
