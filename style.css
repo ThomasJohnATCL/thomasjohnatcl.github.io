@@ -82,24 +82,45 @@ body {
     margin-bottom: 25px;
 }
 
+/* 1. Define the rigid container size */
 .profile-pic {
-    width: 160px;
-    min-width: 160px;
-    background-color: #eeeeee;
-    border: 1px solid #cccccc;
     position: relative;
+    width: 160px;          /* Adjust to your preferred size */
+    height: 160px;         /* Must match width for a perfect square/circle */
+    border-radius: 50%;    /* Makes it a clean academic circle profile (optional) */
+    overflow: hidden;      /* Clips the image/placeholder to the circle */
+    border: 2px solid #e2e8f0; /* Optional: clean subtle border */
 }
 
+/* 2. Force the image to match the container perfectly */
 .profile-pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover;     /* Prevents stretching, crops like a frame */
+    z-index: 2;            /* Sits on top of the placeholder */
 }
 
-.pic-placeholder {
-    padding: 40px 10px;
+/* 3. Force the placeholder to match the exact same space */
+.profile-pic .pic-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f5f9; /* Light grey academic background */
+    color: #64748b;            /* Subtle text color */
+    
+    /* Center the text perfectly inside the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 0.8rem;
-    color: #777777;
+    font-size: 0.85rem;
+    padding: 10px;
+    z-index: 1;                /* Sits behind the image */
 }
 
 .profile-info {
