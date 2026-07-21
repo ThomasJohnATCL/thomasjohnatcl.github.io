@@ -8,77 +8,92 @@
 </head>
 <body>
 
-    <!-- Main Content Container -->
-    <div class="container">
+    <div class="page-container">
         
-        <!-- Top Header Navigation -->
+        <!-- Header / Name Block -->
         <header class="site-header">
-            <div class="brand"></div>
+            <h1 class="author-name">Thomas John</h1>
+            <p class="author-title">Ph.D. Student & Senior Research Fellow</p>
+            <p class="author-affiliation">
+                <a href="https://mfsdsai.iitpkd.ac.in/" target="_blank">Mehta Family School of Data Science and Artificial Intelligence</a><br>
+                <a href="https://iitpkd.ac.in" target="_blank">Indian Institute of Technology Palakkad</a>
+            </p>
+            
             <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#publications">Publications</a>
-                <a href="#teaching">Teaching</a>
+                <a href="#about">About</a> |
+                <a href="#research">Research</a> |
+                <a href="#publications">Publications</a> |
+                <a href="#teaching">Teaching & Activities</a>
             </nav>
         </header>
 
-        <!-- Profile / Hero Section -->
-        <section id="about" class="profile-section">
-            <div class="profile-frame">
-                <!-- If photo.png is missing, the CSS background handles the fallback gracefully -->
-                <img src="profile_photo.png" alt="Thomas John" class="profile-img">
-            </div>
-            <div class="profile-info">
-                <h1>Thomas John</h1>
-                <p class="subtitle">Ph.D student, Senior Research Fellow</p>
-                <p class="affiliation">
-                    <!-- Mehta Family School of Data Science and Artificial Intelligence<br> -->
-                    <a href="https://mfsdsai.iitpkd.ac.in/" target="_blank">Mehta Family School of Data Science and Artificial Intelligence</a><br>
-                    <a href="https://iitpkd.ac.in" target="_blank">Indian Institute of Technology Palakkad</a>
-                </p>
-                
-                <div class="profile-links">
-                    <a href="mailto:142314002@iitpkd.ac.in" class="btn btn-primary">Email Me</a>
-                    <a href="https://scholar.google.com/citations?user=Xahu1joAAAAJ&hl=en" class="btn btn-secondary">Google Scholar</a>
-                    <a href="https://github.com/ThomasJohnATCL" class="btn btn-secondary">GitHub</a>
-                </div>
-            </div>
-        </section>
+        <hr class="divider">
 
         <!-- Main Content -->
         <main>
             
-            <section id="research" class="content-section">
-                <h2 class="section-title">Research Interests</h2>
-                <p>My core research focuses on improving the interpretability and alignment of deep learning architectures. Specifically, I work on <strong>justifiability in computer vision frameworks</strong>, aiming to align machine learning feature extraction mechanisms closely with human visual perspectives.</p>
-                <p><strong>Current Directions:</strong> Vision Transformers (ViTs), Explainable AI (XAI), and custom evaluation metrics for validating neural alignments.</p>
-            </section>
-
-            <section id="publications" class="content-section">
-                <h2 class="section-title">Publications</h2>
-                <div class="publication-item">
-                    <span class="pub-authors"><strong>Thomas John</strong>, Co-author, & Advisor.</span>
-                    <span class="pub-title">"Focus on What Matters: Guiding Vision Transformers Towards Justification."</span>
-                    <span class="pub-venue">Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</span>, 2025.
-                    <div class="pub-links">
-                        <a href="#">[Publisher Link]</a>
-                        <a href="#">[Code]</a>
-                    </div>
+            <!-- Bio / About Section with Floating Photo -->
+            <section id="about" class="section">
+                <div class="photo-container">
+                    <img src="profile_photo.png" alt="Thomas John" class="profile-photo" onerror="this.style.display='none';">
+                </div>
+                
+                <div class="bio-text">
+                    <p>
+                        I am a Senior Research Fellow and Ph.D. scholar in the Mehta Family School of Data Science and Artificial Intelligence at the Indian Institute of Technology Palakkad.
+                    </p>
+                    <p class="contact-links">
+                        <strong>Contact / Profiles:</strong>
+                        <a href="mailto:142314002@iitpkd.ac.in">[Email]</a>
+                        <a href="https://scholar.google.com/citations?user=Xahu1joAAAAJ&hl=en" target="_blank">[Google Scholar]</a>
+                        <a href="https://github.com/ThomasJohnATCL" target="_blank">[GitHub]</a>
+                    </p>
                 </div>
             </section>
 
-            <section id="teaching" class="content-section">
-                <h2 class="section-title">Teaching & Activities</h2>
+            <div class="clear"></div>
+
+            <!-- Research Interests -->
+            <section id="research" class="section">
+                <h2>Research Interests</h2>
+                <p>
+                    My core research focuses on improving the interpretability and alignment of deep learning architectures. Specifically, I work on <strong>justifiability in computer vision frameworks</strong>, aiming to align machine learning feature extraction mechanisms closely with human visual perspectives.
+                </p>
                 <ul class="academic-list">
-                    <li><strong>Teaching Assistant</strong>, Machine Learning / Deep Learning (Undergraduate Level), IIT Palakkad.</li>
-                    <li>Resource person for department Python for Data Science workshops.</li>
+                    <li><strong>Current Focus:</strong> Vision Transformers (ViTs), Explainable AI (XAI), and custom evaluation metrics for validating neural alignments.</li>
+                </ul>
+            </section>
+
+            <!-- Publications -->
+            <section id="publications" class="section">
+                <h2>Publications</h2>
+                <ol class="publications-list">
+                    <li>
+                        <span class="authors"><strong>Thomas John</strong>, Co-author, & Advisor.</span><br>
+                        <span class="title">"Focus on What Matters: Guiding Vision Transformers Towards Justification."</span><br>
+                        <span class="venue">Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</span>, 2025.
+                        <span class="pub-links">
+                            [<a href="#">Publisher Link</a>]
+                            [<a href="#">Code</a>]
+                        </span>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Teaching & Activities -->
+            <section id="teaching" class="section">
+                <h2>Teaching & Activities</h2>
+                <ul class="academic-list">
+                    <li><strong>Teaching Assistant:</strong> Machine Learning / Deep Learning (Undergraduate Level), IIT Palakkad.</li>
+                    <li><strong>Workshop Resource Person:</strong> Department workshops on Python for Data Science.</li>
                 </ul>
             </section>
 
         </main>
 
         <footer class="site-footer">
-            <p>&copy; 2026 Thomas John. Built with clean HTML & CSS.</p>
+            <hr class="divider">
+            <p>&copy; 2026 Thomas John &bull; IIT Palakkad</p>
         </footer>
 
     </div>
