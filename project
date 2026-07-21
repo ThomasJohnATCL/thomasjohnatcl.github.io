@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project | Thomas John</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- Header / Name Block -->
+        <header class="site-header">
+            <h1 class="author-name">Thomas John</h1>
+            <p class="author-title">Ph.D. Student & Senior Research Fellow</p>
+            <p class="author-affiliation">
+                <a href="https://mfsdsai.iitpkd.ac.in/" target="_blank">Mehta Family School of Data Science and Artificial Intelligence</a><br>
+                <a href="https://iitpkd.ac.in" target="_blank">Indian Institute of Technology Palakkad</a>
+            </p>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a> |
+                <a href="project.html" class="active">Research Project (Demo)</a>
+            </nav>
+        </header>
+
+        <hr class="divider">
+
+        <!-- Main Content -->
+        <main>
+            
+            <section class="section">
+                <h2>Guiding Vision Transformers Towards Justification</h2>
+                <p class="project-subtitle"><em>An Overview of Feature Alignment and Justifiability in ViTs</em></p>
+                
+                <div class="project-block">
+                    <h3>Abstract & Overview</h3>
+                    <p>
+                        Standard Vision Transformers (ViTs) extract visual features effectively, but their decision-making process often lacks interpretability. This research introduces a framework designed to guide Vision Transformers toward features that align with human visual perspectives and ground-truth justification maps.
+                    </p>
+                </div>
+
+                <div class="project-block">
+                    <h3>Methodology & Demo Highlights</h3>
+                    <p>
+                        Below is a conceptual walkthrough of how feature extraction alignment is enforced during training:
+                    </p>
+                    
+                    <ul class="academic-list">
+                        <li><strong>Feature Map Extraction:</strong> Extracting output embeddings from final transformer layers.</li>
+                        <li><strong>Justification Loss Alignment:</strong> Penalizing spatial attention maps that stray from target regions.</li>
+                        <li><strong>Evaluation:</strong> Testing alignment against custom metrics for grounding and fidelity.</li>
+                    </ul>
+                </div>
+
+                <div class="project-block">
+                    <h3>Code & Resources</h3>
+                    <p class="pub-links">
+                        [<a href="https://github.com/ThomasJohnATCL" target="_blank">GitHub Repository</a>]
+                        [<a href="#">Interactive Notebook / Demo</a>]
+                        [<a href="#">Download Slides / Poster</a>]
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <hr class="divider">
+            <p>&copy; 2026 Thomas John &bull; IIT Palakkad</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
