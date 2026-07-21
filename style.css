@@ -70,6 +70,11 @@ body {
     padding: 0 4px;
 }
 
+.nav-links a.active {
+    font-weight: bold;
+    color: #000000;
+}
+
 .nav-links a:hover {
     text-decoration: underline;
 }
@@ -95,13 +100,20 @@ h2 {
     margin-bottom: 12px;
 }
 
+h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.1rem;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
 p {
     margin-bottom: 10px;
 }
 
 /* Links */
 a {
-    color: #2528ba;
+    color: #800000;
     text-decoration: none;
 }
 
@@ -126,7 +138,7 @@ a:hover {
 }
 
 .bio-text {
-    overflow: hidden; /* Contains text wrapped around float */
+    overflow: hidden;
 }
 
 .contact-links {
@@ -167,6 +179,16 @@ a:hover {
     font-size: 0.9rem;
 }
 
+/* --- Dedicated Project Page Styles --- */
+.project-subtitle {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.project-block {
+    margin-bottom: 20px;
+}
+
 /* --- Footer --- */
 .site-footer {
     margin-top: 40px;
@@ -175,7 +197,7 @@ a:hover {
     color: #777777;
 }
 
-/* --- Print & Responsive Styles --- */
+/* --- Responsive Styles --- */
 @media (max-width: 600px) {
     .photo-container {
         float: none;
