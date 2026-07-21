@@ -1,262 +1,190 @@
-/* --- Global Reset & Styling --- */
+/* --- Classic Formal Academic CSS --- */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    color: #334155;
-    background-color: #f8fafc;
-    padding: 2rem 1rem;
-}
-
-/* Centered Academic Container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222222;
     background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    padding: 30px 20px;
 }
 
-/* --- Top Header Navigation --- */
+/* Centered fixed-width classical container */
+.page-container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* --- Header & Typography --- */
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 15px;
 }
 
-.site-header .brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1e293b;
+.author-name {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 2.2rem;
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.author-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #444444;
+    margin-bottom: 4px;
+}
+
+.author-affiliation {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.author-affiliation a {
+    color: #555555;
+    text-decoration: none;
+}
+
+.author-affiliation a:hover {
+    text-decoration: underline;
+}
+
+/* Classic Pipe-Separated Nav */
+.nav-links {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #888888;
+    margin-top: 10px;
 }
 
 .nav-links a {
+    color: #800000; /* Traditional academic burgundy */
     text-decoration: none;
-    color: #64748b;
-    font-weight: 500;
-    margin-left: 1.5rem;
-    transition: color 0.2s ease;
+    padding: 0 4px;
 }
 
 .nav-links a:hover {
-    color: #0f172a;
-}
-
-/* --- Profile Section (Horizontal) --- */
-.profile-section {
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
-    margin-bottom: 3.5rem;
-}
-
-/* The Smart Image Container */
-.profile-frame {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #e2e8f0; /* Fallback background tint */
-    border: 3px solid #f1f5f9;
-}
-
-/* If the image breaks, this pseudo-element cleanly prints TJ in the center instead */
-.profile-frame::before {
-    content: "TJ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #94a3b8;
-    background-color: #cbd5e1;
-}
-
-.profile-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1; /* Sits over the fallback letters */
-}
-
-/* Profile Text Styling */
-.profile-info h1 {
-    font-size: 2.25rem;
-    color: #0f172a;
-    line-height: 1.2;
-    margin-bottom: 0.25rem;
-}
-
-.profile-info .subtitle {
-    font-size: 1.1rem;
-    color: #475569;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-}
-
-.profile-info .affiliation {
-    font-size: 0.95rem;
-    color: #64748b;
-    margin-bottom: 1.25rem;
-}
-
-.profile-info a {
-    color: #3b82f6;
-    text-decoration: none;
-}
-
-.profile-info a:hover {
     text-decoration: underline;
 }
 
-/* Buttons / Quick Links */
-.profile-links {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-decoration: none !important;
-    transition: all 0.2s ease;
-}
-
-.btn-primary {
-    background-color: #1e293b;
-    color: #ffffff !important;
-}
-
-.btn-primary:hover {
-    background-color: #0f172a;
-}
-
-.btn-secondary {
-    background-color: #f1f5f9;
-    color: #475569 !important;
-    border: 1px solid #e2e8f0;
-}
-
-.btn-secondary:hover {
-    background-color: #e2e8f0;
-    color: #1e293b !important;
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0 25px 0;
 }
 
 /* --- Content Sections --- */
-.content-section {
-    margin-bottom: 3rem;
+.section {
+    margin-bottom: 30px;
 }
 
-.section-title {
+h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 1.35rem;
-    color: #0f172a;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: normal;
+    color: #800000; /* Academic maroon header */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+    margin-bottom: 12px;
 }
 
-/* Publication Styling */
-.publication-item {
-    padding: 0.75rem 0;
-    border-left: 3px solid #cbd5e1;
-    padding-left: 1rem;
-    margin-bottom: 1.5rem;
+p {
+    margin-bottom: 10px;
 }
 
-.pub-title {
-    font-style: normal;
-    font-weight: 500;
-    color: #1e293b;
-}
-
-.pub-venue {
-    font-style: italic;
-    color: #475569;
-}
-
-.pub-links {
-    margin-top: 0.25rem;
-}
-
-.pub-links a {
-    font-size: 0.85rem;
-    color: #3b82f6;
+/* Links */
+a {
+    color: #800000;
     text-decoration: none;
-    margin-right: 0.5rem;
 }
 
-.pub-links a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-/* Lists styling */
+/* --- Profile Photo (Floating Right) --- */
+.photo-container {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    padding: 3px;
+    background-color: #fff;
+}
+
+.bio-text {
+    overflow: hidden; /* Contains text wrapped around float */
+}
+
+.contact-links {
+    margin-top: 12px;
+}
+
+.contact-links a {
+    margin-right: 6px;
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+.clear {
+    clear: both;
+}
+
+/* --- Lists & Publications --- */
 .academic-list {
-    padding-left: 1.25rem;
+    margin-left: 20px;
+    margin-top: 8px;
 }
 
 .academic-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 6px;
+}
+
+.publications-list {
+    margin-left: 20px;
+}
+
+.publications-list li {
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.pub-links {
+    font-family: monospace;
+    font-size: 0.9rem;
 }
 
 /* --- Footer --- */
 .site-footer {
-    margin-top: 4rem;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 1.5rem;
+    margin-top: 40px;
     text-align: center;
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: #777777;
 }
 
-/* --- Mobile Responsiveness --- */
-@media (max-width: 640px) {
-    .site-header {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
-    }
-    
-    .nav-links a {
-        margin-left: 0;
-        margin-right: 1.25rem;
-    }
-    
-    .profile-section {
-        flex-direction: column;
+/* --- Print & Responsive Styles --- */
+@media (max-width: 600px) {
+    .photo-container {
+        float: none;
+        margin: 0 0 15px 0;
         text-align: center;
-        gap: 1.5rem;
     }
     
-    .profile-links {
-        justify-content: center;
+    .profile-photo {
+        width: 140px;
+        height: 165px;
     }
 }
